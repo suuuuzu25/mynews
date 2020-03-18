@@ -39,7 +39,18 @@
                         </thead>
                         <tbody>
                             @foreach($posts as $news)
-                                 <!--入れたらエラーになる-->
+                                <tr>
+                                    <th>{{ $news->id }}</th>
+                                    <td>{{ str_limit($news->title, 100) }}</td>
+                                    <td>{{ str_limit($news->body, 250) }}</td>
+                                    <td>
+                                        <div>
+                                            <a href="{{ action('Admin\NewsController@edit', ['id' => $news->id]) }}">編集</a>
+                                        </div>
+                                        <div>
+                                            <a href="{{ action('Admin\NewsController@delete', ['id' => $news->id]) }}">削除</a>
+                                    </td>
+                                </tr>
                             @endforeach
                         </tbody>
                     </table>
