@@ -16,8 +16,14 @@
                                 <div class="name">
                                     {{ str_limit($post->name, 150) }}
                                 </div>
-                                <div class="gender mt-3">
-                                    {{ str_limit($post->gender, 1500) }}
+                                <div class="gender">
+                                    {{ str_limit($post->gender, 150) }}
+                                </div>
+                                <div class="hobby">
+                                    {{ str_limit($post->hobby, 150) }}
+                                </div>
+                                <div class="introduction mt-3">
+                                    {{ str_limit($post->introduction, 1500) }}
                                 </div>
                             </div>
                             <div class="image col-md-6 text-right mt-4">
